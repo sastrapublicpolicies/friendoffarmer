@@ -156,29 +156,35 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+  .button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+}
+.button1 {background-color: #DCDCDC; padding: 14px 28px;} /* Green */
 </style>
 </head>
 <body>
 <table style="width:100%">
   <tr>
     <td>
-       <div id='google_translate_element'></div>
+      <div id='google_translate_element'></div>
 
  <script>
 
  function googleTranslateElementInit() {
-
  new google.translate.TranslateElement({
-
  pageLanguage: 'en',
-
  autoDisplay: 'true',
-
- includedLanguages:'hi,en,ta,te', 
-
- layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-
- }, 'google_translate_element');
+ includedLanguages:'ta,en,te,hi', 
+}, 'google_translate_element');
 
  }
 
@@ -186,14 +192,83 @@ img {vertical-align: middle;}
 
  <script src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'></script>
     </td>
-    <td align="right">
-        <a href='http://www.freevisitorcounters.com'>free visitor counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=2b3d7b79c2d5253ecd98a9e0d4a46c97eeea2dbf'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1029593/t/2"></script>
+    <td>
+<button class="button1" onclick="changeLanguageByButtonClick1()" value="ta" id="buttn1"><img src="tamil-img.png"></button>
+<button class="button1" onclick="changeLanguageByButtonClick2()" value="te" id="buttn2"><img src="telugu-img.png"></button>
+<button class="button1" onclick="changeLanguageByButtonClick3()" value="en" id="buttn3"><img src="english-img.png"></button>
+<button class="button1" onclick="changeLanguageByButtonClick4()" value="hi" id="buttn4"><img src="hindi-img.png"></button>
+<script type="text/javascript">
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: "en"}, 'google_translate_element');
+}
+
+function changeLanguageByButtonClick1() {
+  var language = document.getElementById("buttn1").value;
+  var selectField = document.querySelector("#google_translate_element select");
+  for(var i=0; i < selectField.children.length; i++){
+    var option = selectField.children[i];
+    // find desired langauge and change the former language of the hidden selection-field 
+    if(option.value==language){
+       selectField.selectedIndex = i;
+       // trigger change event afterwards to make google-lib translate this side
+       selectField.dispatchEvent(new Event('change'));
+       break;
+    }
+  }
+}
+function changeLanguageByButtonClick2() {
+  var language = document.getElementById("buttn2").value;
+  var selectField = document.querySelector("#google_translate_element select");
+  for(var i=0; i < selectField.children.length; i++){
+    var option = selectField.children[i];
+    // find desired langauge and change the former language of the hidden selection-field 
+    if(option.value==language){
+       selectField.selectedIndex = i;
+       // trigger change event afterwards to make google-lib translate this side
+       selectField.dispatchEvent(new Event('change'));
+       break;
+    }
+  }
+}
+  function changeLanguageByButtonClick3() {
+  var language = document.getElementById("buttn3").value;
+  var selectField = document.querySelector("#google_translate_element select");
+  for(var i=0; i < selectField.children.length; i++){
+    var option = selectField.children[i];
+    // find desired langauge and change the former language of the hidden selection-field 
+    if(option.value==language){
+       selectField.selectedIndex = i;
+       // trigger change event afterwards to make google-lib translate this side
+       selectField.dispatchEvent(new Event('change'));
+       break;
+    }
+  }
+}
+function changeLanguageByButtonClick4() {
+  var language = document.getElementById("buttn4").value;
+  var selectField = document.querySelector("#google_translate_element select");
+  for(var i=0; i < selectField.children.length; i++){
+    var option = selectField.children[i];
+    // find desired langauge and change the former language of the hidden selection-field 
+    if(option.value==language){
+       selectField.selectedIndex = i;
+       // trigger change event afterwards to make google-lib translate this side
+       selectField.dispatchEvent(new Event('change'));
+       break;
+    }
+  }
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </td>
+    <td align="right"><a href='http://www.freevisitorcounters.com'></a>
+     <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=0e7ddabb1a9e35a2e9bb624937457725c89c0420'></script>
+      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1029590/t/2"></script>
      </td>
  </tr>
  </table>
 
-  
   
 <div class="header">
 <div style="padding:0 16px;">
